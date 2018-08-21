@@ -55,3 +55,14 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+//
+// function myFunction() {
+//     var x = document.getElementById("mySelect").value;
+//     document.getElementById("demo").innerHTML = "You selected: " + x;
+// }
+
+function roastSel() {
+    var x = document.querySelector("light");
+
+}
