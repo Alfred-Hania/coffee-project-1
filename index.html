@@ -11,24 +11,24 @@
 
 
 <!--<form>-->
-    <!--<label for="roast-selection"></label>-->
-    <!--<select id="roast-selection">-->
-        <!--<option>light</option>-->
-        <!--<option>medium</option>-->
-        <!--<option>dark</option>-->
-    <!--</select>-->
-    <!--<input id="submit" type="submit"/>-->
+<!--<label for="roast-selection"></label>-->
+<!--<select id="roast-selection">-->
+<!--<option>light</option>-->
+<!--<option>medium</option>-->
+<!--<option>dark</option>-->
+<!--</select>-->
+<!--<input id="submit" type="submit"/>-->
 <!--</form>-->
 
 <!--<table>-->
-    <!--<thead>-->
-    <!--<tr>-->
-        <!--<th>ID</th>-->
-        <!--<th>NAME</th>-->
-        <!--<th>ROAST</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-    <!--<tbody id="coffees"></tbody>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>ID</th>-->
+<!--<th>NAME</th>-->
+<!--<th>ROAST</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody id="coffees"></tbody>-->
 <!--</table>-->
 
 
@@ -40,17 +40,17 @@
     </div>
 
     <div class="row">
-        <div class="col-3" id = list1>
-
+        <div class="col-3" id=list1>
+            <p id="demo"></p>
         </div>
-        <div class="col-3" id = list2>
-
+        <div class="col-3" id=list2>
+            <p></p>
         </div>
         <div class="col-6">
 
             <div class="form-group">
                 <label for="select1">Roast:</label>
-                <select class="form-control" id="select1">
+                <select class="form-control" id="select1" onchange="roastSel('select1')">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
@@ -74,7 +74,7 @@
 
             <div class="form-group">
                 <label for="select2">Roast:</label>
-                <select class="form-control" id="select2">
+                <select class="form-control" id="select2" onchange="roastSel('select2')">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
@@ -101,20 +101,6 @@
 </html>
 
 
-
-
-
-
-
-
-
-    <!--<div class="card-footer bg-transparent border-secondary text-right">-->
-        <!--<div class="btn-group" role="group" aria-label="Basic example">-->
-            <!--<button type="button" class="btn btn-primary">< Previous Step</button>-->
-            <!--<button type="button" class="btn btn-primary">Next Step ></button>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
 
 
 

@@ -11,10 +11,11 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
+    var html = '<table>';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    html += '</table>';
     return html;
 }
 
@@ -48,21 +49,42 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+// var tbody = document.querySelector('#coffees');
+// var submitButton = document.querySelector('#submit');
+// var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 
 //
-// function myFunction() {
-//     var x = document.getElementById("mySelect").value;
-//     document.getElementById("demo").innerHTML = "You selected: " + x;
-// }
 
-function roastSel() {
-    var x = document.querySelector("light");
+
+function roastSel(field){
+    var selectedRoast = document.getElementById(field);
+
+    var roastSelected = selectedRoast.options[selectedRoast.selectedIndex].value;
+
+    var coffeesWithSelectedRoast = [];
+    for (var i = 0; i < coffees.length; i++) {
+        var coffee = coffees[i];
+        if (coffee.roast === roastSelected) {
+            coffeesWithSelectedRoast.push(coffee);
+        }
+        else if (roastSelected === "all") {
+            coffeesWithSelectedRoast.push(coffee);
+        }
+    }
+
+    document.getElementById("demo").innerHTML = renderCoffees(coffeesWithSelectedRoast);
 
 }
+
+
+
+
+
+
+
+
+
