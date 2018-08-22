@@ -2,9 +2,9 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<td id="coffeeName">' + coffee.name + '</td>';
+    html += '<td id="coffeeRoast">' + coffee.roast + '</td>';
     html += '</tr>';
 
     return html;
@@ -18,6 +18,7 @@ function renderCoffees(coffees) {
     html += '</table>';
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data

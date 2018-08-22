@@ -4,10 +4,24 @@ table {
 }
 
 td, th {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 5px 10px;
 }
 
 #header {
     text-align: center;
+}
+
+.container {
+    background-color: #fbf1d0;
+    border-radius: 7px;
+}
+
+#coffeeName {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#coffeeRoast {
+    color: gray;
 }
