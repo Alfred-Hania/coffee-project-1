@@ -17,19 +17,34 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+// function myFunction() {
+//     var x = document.getElementById("mySelect").value;
+//     document.getElementById("demo").innerHTML = "You selected: " + x;
+// }
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    var selectedRoast = document.getElementById("select1");
+    var roast= selectedRoast.optionsselectedIndex].value = [];
+
+    document.getElementById("demo").innerHTML=renderCoffees(coffees);
+
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// function toggleText(element){
+//     var text = element.textContent;
+//
+//     if (text == 'Edit') {
+//         element.textContent = 'Done';
+//     } else {
+//         element.textContent = 'Edit';
+//     }
+// }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
