@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '<table>';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     html += '</table>';
@@ -23,7 +23,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -60,7 +60,7 @@ var coffees = [
 //
 
 
-function roastSel(field){
+function roastSel(field) {
     var selectedRoast = document.getElementById(field);
 
     var roastSelected = selectedRoast.options[selectedRoast.selectedIndex].value;
@@ -81,63 +81,27 @@ function roastSel(field){
 }
 
 
+function searchFilter(field2) {
+    var input, filter, i;
+    input = document.getElementById(field2);
 
-// function myFunction() {
-//     var input, filter, ul, li, a, i;
-//     input = document.getElementById("myInput");
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");                      - our coffees[]
-//     li = ul.getElementsByTagName("li");                        -objects
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
-
-//
-
-
-function searchFilter() {
-      var input, filter, i;
-      input = document.getElementById("name1");
-
-      filter = input.value.toLowerCase();
+    filter = input.value.toLowerCase();
 
     var coffeesWithSelectedName = [];
-      for (i=0; i < coffees.length; i++) {
-          var coffee = coffees[i];
+    for (i = 0; i < coffees.length; i++) {
+        var coffee = coffees[i];
 
-             if (coffee.name.toLowerCase().indexOf(filter) > -1) {
-                 coffeesWithSelectedName.push(coffee);
-             }
-      }
-      
+        if (coffee.name.toLowerCase().indexOf(filter) > -1) {
+            coffeesWithSelectedName.push(coffee);
+        }
+    }
+
     document.getElementById("demo").innerHTML = renderCoffees(coffeesWithSelectedName);
 }
 
 
- // function searchByName(){
- //     // var input = document.getElementById("name1");
- //     var input = "a";
- //     var filter = input.toLowerCase();
- //     var coffeesWithSelectedName = [];
- //     var i;
- //
- //     coffees.forEach(function () {
- //         var coffee = coffees[i];
- //            if (coffee.name.startsWith(filter)) {
- //                coffeesWithSelectedName.push(coffee);
- //            }
- //     })
- //
- //
- // }
- //
- //    console.log(searchByName());
+
+ 
 
 
 
