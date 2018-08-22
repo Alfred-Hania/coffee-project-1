@@ -82,6 +82,70 @@ function roastSel(field){
 
 
 
+// function myFunction() {
+//     var input, filter, ul, li, a, i;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myUL");                      - our coffees[]
+//     li = ul.getElementsByTagName("li");                        -objects
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("a")[0];
+//         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
+
+//
+function searchFilter() {
+      var input, filter, a, i;
+      input = document.getElementById("name1");
+      filter = input.value.toUpperCase();
+
+
+      for (i=0; i < coffees.length; i++) {
+          var coffee = coffees[i];
+             a = coffee.name[0];
+          var coffeesWithSelectedName = [];
+             if (a.toUpperCase().indexOf(filter) > -1){
+                 coffeesWithSelectedName.push(coffee);
+             } else {
+                 coffeesWithSelectedName.push(coffee);
+             }
+      }
+
+
+    document.getElementById("demo").innerHTML = renderCoffees(coffeesWithSelectedName);
+}
+
+
+
+// function searchFilter() {
+//     var input, filter, a, i;
+//     input = document.getElementById("name1");
+//     filter = input.value.toUpperCase();
+//
+//
+//     for (i=0; i < coffees.length; i++) {
+//         var coffee = coffees[i];
+//         a = coffee.name[0];
+//         var coffeesWithSelectedName = [];
+//         if (a.toUpperCase().indexOf(filter) > -1){
+//             coffeesWithSelectedName.push();
+//         } else {
+//             coffeesWithSelectedName.push();
+//         }
+//     }
+//
+//
+//     document.getElementById("demo").innerHTML = renderCoffees(coffeesWithSelectedName);
+// }
+
+
+
+
 
 
 
