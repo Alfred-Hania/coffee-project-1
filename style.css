@@ -13,13 +13,14 @@ td, th {
 }
 
 .container {
-    
+
     border-radius: 7px;
     /*background-color: #fff5d3;  */
 
 }
+
 p, h1 {
-    background-color: #eedac5;  */
+    background-color: #eedac5;
 }
 
 #coffeeName {
