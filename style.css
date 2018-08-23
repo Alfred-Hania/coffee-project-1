@@ -13,8 +13,13 @@ td, th {
 }
 
 .container {
-    background-color: #fbf1d0;
+    
     border-radius: 7px;
+    /*background-color: #fff5d3;  */
+
+}
+p, h1 {
+    background-color: #eedac5;  */
 }
 
 #coffeeName {
@@ -24,4 +29,10 @@ td, th {
 
 #coffeeRoast {
     color: gray;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
